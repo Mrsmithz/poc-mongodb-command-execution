@@ -1,0 +1,1 @@
+# POC MongoDB command execution with REST api and Docker

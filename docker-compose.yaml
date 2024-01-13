@@ -1,0 +1,15 @@
+version: '3'
+services:
+  server:
+    build:
+      context: ./service
+      dockerfile: Dockerfile
+    ports:
+      - 9999:8080
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./service
+          target: /app
+          ignore:
+            - node_modules/
